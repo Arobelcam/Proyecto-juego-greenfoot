@@ -14,6 +14,19 @@ public class serpiente extends Actor
      */
     public void act()
     {
-        //
+        move(2);
+        World m=getWorld();
+        if(getX()>=m.getWidth()-5||getX()<=5){
+            turn(180);
+            if(Greenfoot.getRandomNumber(100)<90){
+            turn(Greenfoot.getRandomNumber(90-45));
+        }
+        }
+        if(getY()>=m.getHeight()-5||getY()<=5){
+            turn(180);
+            if(Greenfoot.getRandomNumber(100)<90){
+            turn(Greenfoot.getRandomNumber(90-45));
+        }
+        }
     }
 }
