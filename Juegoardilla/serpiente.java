@@ -28,5 +28,7 @@ public class serpiente extends Actor
             turn(Greenfoot.getRandomNumber(90-45));
         }
         }
+   
+        }
     }
-}
+
