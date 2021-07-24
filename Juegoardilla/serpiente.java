@@ -14,6 +14,7 @@ public class serpiente extends Actor
      */
     public void act()
     {
+        // Se define el movimiento aleatorio que tendrán las serpiente en el mapa
         move(2);
         World m=getWorld();
         if(getX()>=m.getWidth()-5||getX()<=5){
@@ -21,6 +22,7 @@ public class serpiente extends Actor
             if(Greenfoot.getRandomNumber(100)<90){
             turn(Greenfoot.getRandomNumber(90-45));
         }
+        // Con el metodo move y getrandom se logra el movimiento aleatorio
         }
         if(getY()>=m.getHeight()-5||getY()<=5){
             turn(180);

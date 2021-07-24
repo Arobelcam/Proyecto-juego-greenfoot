@@ -14,14 +14,17 @@ public class bosque extends World
      * Constructor for objects of class bosque.
      * 
      */
+    // se establece la clase dle bosque
     public bosque()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Se crea el mundo con la dimensiones deseadas en conjunto con las
+        //serpientes en el mapa
         super(800, 500, 1);
         ardilla a1=new ardilla();
         addObject(a1,40, 200);
         crearSerpientes(6);
     }
+    //Se indica que las serpientes aparezcan de forma aleatoria
     public void crearSerpientes(int numero){
         for(int i=0;i<numero;i++){
             serpiente s=new serpiente();
