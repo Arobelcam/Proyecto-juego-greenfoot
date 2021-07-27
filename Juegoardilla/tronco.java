@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class abeja here.
+ * Write a description of class tronco here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class abeja extends Actor
+public class tronco extends Actor
 {
     /**
-     * Act - do whatever the abeja wants to do. This method is called whenever
+     * Act - do whatever the tronco wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
