@@ -8,10 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class serpiente extends Actor
 {
-    /**
-     * Act - do whatever the serpiente wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act()
     {
         // Se define el movimiento aleatorio que tendrán las serpiente en el mapa
@@ -30,7 +26,13 @@ public class serpiente extends Actor
             turn(Greenfoot.getRandomNumber(90-45));
         }
         }
-   
+         Actor ardilla=getOneObjectAtOffset(0,0,ardilla.class);
+         if(ardilla!=null){
+             bosque bosq=(bosque)getWorld();
+             getWorld().removeObject(ardilla);
+             bosq.objvida.Disminuir();
+             getWorld().addObject(new ardilla(),50,300);
+         }
         }
     }
 

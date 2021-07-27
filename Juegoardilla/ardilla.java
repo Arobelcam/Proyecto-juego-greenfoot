@@ -13,6 +13,8 @@ public class ardilla extends Actor
     public static final int DOWN=1;
     public static final int LEFT=2;
     public static final int RIGHT=3;
+    int direccionDisparo=2;
+    boolean isDisparo=false;
     // Se establce la clase de ardilla
     public void ardilla(){
         
@@ -23,17 +25,32 @@ public class ardilla extends Actor
     {
         if(Greenfoot.isKeyDown("up")){
             setDirection(UP);
+            direccionDisparo=0;
         }
         if(Greenfoot.isKeyDown("down")){
             setDirection(DOWN);
+            direccionDisparo=1;
         }
         if(Greenfoot.isKeyDown("left")){
             setDirection(LEFT);
+            direccionDisparo=3;
         }
         if(Greenfoot.isKeyDown("right")){
             setDirection(RIGHT);
+            direccionDisparo=2;
         }
+        setDisparo(direccionDisparo);
     } 
+    public void setDisparo(int direccion){
+        if(isDisparo && Greenfoot.isKeyDown("x")){
+            disparo d1 = new disparo(direccion);
+            getWorld().addObject(d1, getX(),getY());
+            isDisparo=false;
+        }
+        if (!isDisparo && !Greenfoot.isKeyDown("x")){
+            isDisparo=true;
+        }
+    }
     // Se establece la rotacion de movimiento y el aceleramiento con la tecla
     // de espacio.
     public void setDirection(int direccion){

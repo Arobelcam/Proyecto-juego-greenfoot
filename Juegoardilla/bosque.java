@@ -8,12 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class bosque extends World
 {
-    
-    
-    /**
-     * Constructor for objects of class bosque.
-     * 
-     */
+    public vidas objvida;
     // se establece la clase dle bosque
     public bosque()
     {    
@@ -23,6 +18,7 @@ public class bosque extends World
         ardilla a1=new ardilla();
         addObject(a1,40, 200);
         crearSerpientes(6);
+        objvida= new vidas();
     }
     //Se indica que las serpientes aparezcan de forma aleatoria
     public void crearSerpientes(int numero){
