@@ -32,6 +32,10 @@ public class serpiente extends Actor
              getWorld().removeObject(ardilla);
              bosq.objvida.Disminuir();
              getWorld().addObject(new ardilla(),50,300);
+             if(bosq.vidas.obtenerValor()==0){
+                 GameOver t=new GameOver();
+                 getWorld().addObject(t,((getWorld().getWidth()/2)+30),((getWorld().getHeight()/2)+150));
+             }
          }
         }
     }
