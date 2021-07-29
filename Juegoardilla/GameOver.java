@@ -13,7 +13,7 @@ public class GameOver extends Actor
      * Act - do whatever the GameOver wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    //Se crea el metodo de gameover para mostrar el mensaje de juego terminado al perder las tres vidas del actor principal.
     GreenfootImage imagen;
     String mensaje;
     public GameOver()

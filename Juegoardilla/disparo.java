@@ -15,6 +15,7 @@ public class disparo extends Actor
     public disparo(int direccion){
         posicion=direccion;
     }
+    //Se establecen los parametros principales para los disparos , como su direccion y velocidad en el mapa 
     public void act()
     {
         switch(posicion){

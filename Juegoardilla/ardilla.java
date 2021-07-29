@@ -42,6 +42,7 @@ public class ardilla extends Actor
         }
         setDisparo(direccionDisparo);
     } 
+    // la direccion y teclas con las que se activan los dos disparos son programadas.
     public void setDisparo(int direccion){
         if(isDisparo && Greenfoot.isKeyDown("x")){
             disparo d1 = new disparo(direccion);

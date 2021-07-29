@@ -14,6 +14,7 @@ public class hongo extends Actor
      */
     public void act()
     {
+        // Se establece que cuando la ardilla comsuma un hongo, este le subira un total de 1o puntos en el tablero
         bosque bosq=(bosque)getWorld();
         Actor act=getOneIntersectingObject(ardilla.class);
         if(act!=null)

@@ -26,7 +26,8 @@ public class serpiente extends Actor
             turn(Greenfoot.getRandomNumber(90-45));
         }
         }
-         Actor ardilla=getOneObjectAtOffset(0,0,ardilla.class);
+         // Se configura que al momento de que la serpiente pierda sus tres vidas, el "Fin del juego" de game over saldra en el centro del mapa.
+        Actor ardilla=getOneObjectAtOffset(0,0,ardilla.class);
          if(ardilla!=null){
              bosque bosq=(bosque)getWorld();
              getWorld().removeObject(ardilla);

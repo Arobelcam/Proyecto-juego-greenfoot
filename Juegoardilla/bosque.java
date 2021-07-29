@@ -37,6 +37,7 @@ public class bosque extends World
             addObject(s,x,y);
         }
     }
+    //Metodo que permite la aparicion aleatoria de hongos en el mapa.
     public void crearhongo(int numero){
         for(int i=0; i<numero;i++){
             hongo h=new hongo();
