@@ -30,7 +30,8 @@ public class serpiente extends Actor
          if(ardilla!=null){
              bosque bosq=(bosque)getWorld();
              getWorld().removeObject(ardilla);
-             bosq.objvida.Disminuir();
+             bosq.vidas.Disminuir();
+             Greenfoot.playSound("ardilla.wav");
              getWorld().addObject(new ardilla(),50,300);
              if(bosq.vidas.obtenerValor()==0){
                  GameOver t=new GameOver();

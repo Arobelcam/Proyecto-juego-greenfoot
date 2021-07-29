@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class bosque here.
  * 
@@ -26,6 +26,7 @@ public class bosque extends World
         vidas=new Tablero(3, "Vidas:");
         addObject(puntos,150,85);
         addObject(vidas,300,85);
+        crearhongo(3);
     }
     //Se indica que las serpientes aparezcan de forma aleatoria
     public void crearSerpientes(int numero){
@@ -35,6 +36,17 @@ public class bosque extends World
             int y=Greenfoot.getRandomNumber(getHeight());
             addObject(s,x,y);
         }
+    }
+    public void crearhongo(int numero){
+        for(int i=0; i<numero;i++){
+            hongo h=new hongo();
+            int x=Greenfoot.getRandomNumber(getWidth());
+            int y=Greenfoot.getRandomNumber(getHeight());
+            int hon=Greenfoot.getRandomNumber(5);
+            if(hon==4)
+                addObject(h,x,y);
+        }
+        
     }
     
 }

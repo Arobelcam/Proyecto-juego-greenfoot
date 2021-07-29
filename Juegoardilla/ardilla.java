@@ -15,6 +15,7 @@ public class ardilla extends Actor
     public static final int RIGHT=3;
     int direccionDisparo=2;
     boolean isDisparo=false;
+    boolean isBellota=false;
     // Se establce la clase de ardilla
     public void ardilla(){
         
@@ -49,6 +50,16 @@ public class ardilla extends Actor
         }
         if (!isDisparo && !Greenfoot.isKeyDown("x")){
             isDisparo=true;
+            //Greenfoot.playSound("disparo.wav");
+        }
+        if(isBellota && Greenfoot.isKeyDown("z")){
+            bellota b1 = new bellota(direccion);
+            getWorld().addObject(b1, getX(),getY());
+            isBellota=false;
+        }
+        if (!isBellota && !Greenfoot.isKeyDown("z")){
+            isBellota=true;
+            Greenfoot.playSound("bellota.wav");
         }
     }
     // Se establece la rotacion de movimiento y el aceleramiento con la tecla
@@ -58,7 +69,7 @@ public class ardilla extends Actor
             case UP:
             setRotation(270);
             if(Greenfoot.isKeyDown("space")){
-            setLocation(getX(),getY()-10);    
+            setLocation(getX(),getY()-10); 
         }
         else{
             setLocation(getX(),getY()-1);
@@ -92,6 +103,6 @@ public class ardilla extends Actor
         }
             break;
     }
-}
+    }
 }
     

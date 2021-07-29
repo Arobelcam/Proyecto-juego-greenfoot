@@ -31,7 +31,7 @@ public class Tablero extends Actor
         cont++;
         dibuja();
     }
-    public void decrecer()
+    public void Disminuir()
     {
         cont--;
         dibuja();

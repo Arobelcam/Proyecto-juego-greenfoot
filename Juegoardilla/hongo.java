@@ -14,6 +14,15 @@ public class hongo extends Actor
      */
     public void act()
     {
-        // Add your action code here.
-    }
+        bosque bosq=(bosque)getWorld();
+        Actor act=getOneIntersectingObject(ardilla.class);
+        if(act!=null)
+        {
+          for( int i=1;i<=10;i++)
+              bosq.puntos.incrementar();
+          getWorld().removeObject(this);
+          Greenfoot.playSound("hongo.wav");
+        }
+    
+}
 }

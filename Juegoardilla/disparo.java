@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class disparo extends Actor
 {
     int disparoImage = 1;
-    int velocidaddisparo= 6;
+    int velocidaddisparo= 2;
     int posicion;
     
     public disparo(int direccion){
@@ -30,6 +30,14 @@ public class disparo extends Actor
             case 3:
                 setLocation(getX()-velocidaddisparo,getY());
             break;  
+        }
+        Actor serpiente=getOneObjectAtOffset(0,0,serpiente.class);
+        if(serpiente!=null){
+            bosque bosq=(bosque)getWorld();
+            getWorld().removeObject(serpiente);
+            bosq.puntos.incrementar();
+            bosq.crearSerpientes(1);
+            //getWorld().removeObject(this);
         }
         if((getX()>=getWorld().getWidth()-5)||(getX()<=5)){
             getWorld().removeObject(this);
